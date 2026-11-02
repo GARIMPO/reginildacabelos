@@ -2,12 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Scissors, Sparkles, Droplets, Palette, Heart, MapPin, Phone, Star, Clock, Award, Smile } from "lucide-react";
 import hero from "@/assets/hero-salao.jpg";
-import t1 from "@/assets/trabalho-1.png.asset.json";
-import t2 from "@/assets/trabalho-2.png.asset.json";
-import t3 from "@/assets/trabalho-3.png.asset.json";
-import t4 from "@/assets/trabalho-4.png.asset.json";
-import t5 from "@/assets/trabalho-5.png.asset.json";
-import t6 from "@/assets/trabalho-6.png.asset.json";
 
 const TITLE = "Reginilda Cabeleireira Unissex | Salão em Pouso Alegre/MG";
 const DESC = "Cortes, escovas, coloração, mechas e tratamentos capilares no Centro de Pouso Alegre. Agende seu horário pelo WhatsApp.";
