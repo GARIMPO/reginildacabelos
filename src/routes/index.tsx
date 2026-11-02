@@ -2,12 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Scissors, Sparkles, Droplets, Palette, Heart, MapPin, Phone, Star, Clock, Award, Smile } from "lucide-react";
 import hero from "@/assets/hero-salao.jpg";
-import t1 from "@/assets/trabalho-1.png.asset.json";
-import t2 from "@/assets/trabalho-2.png.asset.json";
-import t3 from "@/assets/trabalho-3.png.asset.json";
-import t4 from "@/assets/trabalho-4.png.asset.json";
-import t5 from "@/assets/trabalho-5.png.asset.json";
-import t6 from "@/assets/trabalho-6.png.asset.json";
 
 const TITLE = "Reginilda Cabeleireira Unissex | Salão em Pouso Alegre/MG";
 const DESC = "Cortes, escovas, coloração, mechas e tratamentos capilares no Centro de Pouso Alegre. Agende seu horário pelo WhatsApp.";
@@ -66,7 +60,7 @@ const services = [
   { icon: Palette, t: "Coloração e mechas", d: "Coloração, luzes, mechas e tons vibrantes com técnica e cuidado." },
   { icon: Heart, t: "Outros serviços", d: "Maquiagem, penteados para eventos e cuidados de beleza completos." },
 ];
-const gallery = [t1, t2, t3, t4, t5, t6];
+const gallery = ["/fotos/foto-1.png", "/fotos/foto-2.png", "/fotos/foto-3.png", "/fotos/foto-4.png", "/fotos/foto-5.png", "/fotos/foto-6.png"];
 const reviews = [
   { n: "Mariana S.", t: "Atendimento maravilhoso! Saí do salão me sentindo outra pessoa. Recomendo demais." },
   { n: "Carlos R.", t: "Corte impecável e ambiente muito acolhedor. Virei cliente fiel." },
@@ -161,7 +155,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
           <div className="relative mx-auto w-full max-w-sm">
             <div className="absolute -inset-3 rounded-[2rem] border border-gold/60" />
-            <img src={t1.url} alt="Trabalho do salão Reginilda" loading="lazy" className="relative aspect-[4/5] w-full rounded-[2rem] object-cover" />
+            <img src="/fotos/foto-1.png" alt="Trabalho do salão Reginilda" loading="lazy" className="relative aspect-[4/5] w-full rounded-[2rem] object-cover" />
           </div>
           <div>
             <span className="text-xs uppercase tracking-[0.3em] text-gold">Nossa história</span>
@@ -194,7 +188,7 @@ function Index() {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {gallery.map((g, i) => (
               <div key={i} className="aspect-square overflow-hidden rounded-2xl border border-gold/30">
-                <img src={g.url} alt={`Trabalho ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 hover:scale-110" />
+                <img src={g} alt={`Trabalho ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 hover:scale-110" />
               </div>
             ))}
           </div>
